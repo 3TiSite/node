@@ -1,0 +1,4 @@
+LOCK TABLES `kind` WRITE;
+INSERT INTO `kind` VALUES
+(1,'cnameFlatten',600,6,2);
+UNLOCK TABLES;

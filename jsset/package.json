@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "source-map-support": "^0.5.21",
+    "@3-/loader": "^0.0.5",
+    "wasm-opt": "^1.4.0"
+  }
+}

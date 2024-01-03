@@ -1,0 +1,27 @@
+{
+  "name": "@3-/alive",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/alive",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": ["lib/*"],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "peerDependencies": {},
+  "dependencies": {
+    "@3-/dbq": "^0.1.17",
+    "@3-/default": "^0.1.7",
+    "@3-/nt": "^0.1.2",
+    "@3-/str2sec": "^0.1.2",
+    "@3-/time": "^0.1.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@3-/jsset",
+  "version": "0.0.1",
+  "main": "_.js",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/jsset",
+  "license": "Apache-2.0",
+  "author": "i18n.site@gmail.com",
+  "exports": {
+    ".": "./_.js",
+    "./*": "./*"
+  },
+  "files": [
+    "*.wasm",
+    "*.ts"
+  ]
+}

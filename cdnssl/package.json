@@ -1,0 +1,23 @@
+{
+  "name": "cdnssl",
+  "version": "0.1.5",
+  "type": "module",
+  "peerDependencies": {
+    "@3-/default": "^0.1.7",
+    "@3-/read": "^0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/cdnssl",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ]
+}

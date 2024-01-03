@@ -1,0 +1,21 @@
+{
+  "name": "@3-/mark",
+  "version": "0.1.1",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/mark",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "type": "module",
+  "dependencies": {
+    "micromark": "^4.0.0",
+    "micromark-extension-gfm-footnote": "^2.0.0",
+    "micromark-extension-gfm-table": "^2.0.0"
+  }
+}

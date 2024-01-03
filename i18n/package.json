@@ -1,0 +1,42 @@
+{
+  "name": "@3-/i18n",
+  "version": "0.1.3",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/i18n",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@3-/bar": "^0.0.1",
+    "@3-/binmap": "^0.0.1",
+    "@3-/cache": "^0.0.3",
+    "@3-/cache_map": "^0.0.1",
+    "@3-/ext": "^0.0.1",
+    "@3-/is-change": "^0.1.2",
+    "@3-/lang": "^0.1.10",
+    "@3-/nt": "^0.1.1",
+    "@3-/pool": "^0.0.3",
+    "@3-/tran": "^0.0.6",
+    "@3-/tran_md": "^0.0.15",
+    "@3-/tranvar": "^0.0.8",
+    "@3-/u8": "^0.1.1",
+    "@3-/utf8": "^0.0.3",
+    "@3-/walk": "^0.0.1",
+    "@3-/write": "^0.0.1",
+    "@3-/xxhash3": "^0.0.2",
+    "yargs": "^17.7.2"
+  },
+  "bin": {
+    "i18n": "./lib/i18n.js"
+  },
+  "devDependencies": {
+    "@3-/uridir": "^0.0.2"
+  }
+}

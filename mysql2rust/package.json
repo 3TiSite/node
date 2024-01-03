@@ -1,0 +1,24 @@
+{
+  "name": "@3-/mysql2rust",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/mysql2rust",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@3-/rm": "^0.1.1"
+  }
+}

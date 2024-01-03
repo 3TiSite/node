@@ -1,0 +1,218 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@3-/cache':
+    specifier: ^0.1.1
+    version: 0.1.1
+  '@3-/dbq':
+    specifier: ^0.1.17
+    version: 0.1.17(@3-/is_dev@0.1.1)(mariadb@3.2.3)
+  '@3-/default':
+    specifier: ^0.1.7
+    version: 0.1.7
+  '@3-/nt':
+    specifier: ^0.1.2
+    version: 0.1.2
+  '@3-/str2sec':
+    specifier: ^0.1.2
+    version: 0.1.2
+  '@3-/time':
+    specifier: ^0.1.3
+    version: 0.1.3
+
+packages:
+
+  /@3-/cache@0.1.1:
+    resolution: {integrity: sha512-kLEIrqoYUvfYYTzg4yT/kpcK/SGjslyRa2Sb8juHc5SAo7y54Tg6CMfTtAW0XSIg5Aq5xMYtlgM3XC6BO3ithw==}
+    dependencies:
+      '@3-/jsmap': 0.1.1
+      '@3-/msgpack': 0.1.2
+    dev: false
+
+  /@3-/caller_line@0.0.1:
+    resolution: {integrity: sha512-ABXNqaN3kT4CBAdi43yjQQk7gbv7wkUAvlUIk+EC6DKptfiRSJtsRnYAjX17qYprdtpnYd5o8uESbS4xEP1hSw==}
+    dev: false
+
+  /@3-/dbq@0.1.17(@3-/is_dev@0.1.1)(mariadb@3.2.3):
+    resolution: {integrity: sha512-obOpD+eZXM7ZHMbLV4zYcFYtpWIhTPmcG5eWE8kbc6+FzZXi/AeXrSY18prfvrswLtwKQ2pzSlklPuhaMGiNzA==}
+    peerDependencies:
+      '@3-/is_dev': ^0.1.1
+      mariadb: ^3.2.3
+    dependencies:
+      '@3-/is_dev': 0.1.1
+      '@3-/retry': 0.0.1
+      mariadb: 3.2.3
+    dev: false
+
+  /@3-/default@0.1.7:
+    resolution: {integrity: sha512-uKc6WBqgqWESLaZ88SsnZWavExUmC8B70WUXxeqiethZZi8qqhY31iDxl7YtSJ4OwbQtEJL25B+QZtMVWgk4/g==}
+    dev: false
+
+  /@3-/is_dev@0.1.1:
+    resolution: {integrity: sha512-8fwTDQsIZy9XlZcc69sT9J3JM2hjMymEZrJ4reQ+MgQJWmKduBA75Ywuy3/Y3ExmIMpO8l6fwzAJafi/Ym0afg==}
+    dev: false
+
+  /@3-/jsmap@0.1.1:
+    resolution: {integrity: sha512-1D4s/4YKo+sX9WkOsbouV5MRtRJYFOd96hyspLLvUEbu28ZvtGw+Lj6sbvByx4msfJpQiqz8opx6d5kZRiTQaA==}
+    dev: false
+
+  /@3-/msgpack@0.1.2:
+    resolution: {integrity: sha512-2ExwI9JuEnXGg+jxT/Oo5wbVfOB1rt1P5lrePWDauTAHznatmLxEEyMsQMMRw2nwW/kH9411J+65DfeDzhardg==}
+    dependencies:
+      msgpackr: 1.10.1
+    dev: false
+
+  /@3-/nt@0.1.2:
+    resolution: {integrity: sha512-kfFAohm5nSLHpQOJxSLbjwhAoWPKArrItjPigzJWh+HOgTFhv2T4BWRpWgPSiS9jfe2HM7xbCZsZIp8v4s14oQ==}
+    dependencies:
+      '@3-/read': 0.0.1
+      '@3-/write': 0.0.1
+    dev: false
+
+  /@3-/read@0.0.1:
+    resolution: {integrity: sha512-yTSQz6SC8yeFIAzXpTQmqQrJvlW5LG9+t1xy0QuWp8oG3uhxpXs+8M7dRcqFQz+bWdCc33gzcnCWJe12Hx3eQg==}
+    dev: false
+
+  /@3-/retry@0.0.1:
+    resolution: {integrity: sha512-XB/6DNobSb/ZEeWyHqMGyHUHRTOjXCEIXLaWqdojlHJuiScnK7gkXYzuM1bU0t9AFl4ejl/COdo7ekKtyDtPLQ==}
+    dependencies:
+      '@3-/caller_line': 0.0.1
+      '@3-/sleep': 0.0.3
+    dev: false
+
+  /@3-/sleep@0.0.3:
+    resolution: {integrity: sha512-QcbMvCjN1iylVzOv8VGuAwHKFtRxbNmAenYc9OfvxA/Dl9vyBoSGO3bRovLkYL2jm4lx/R33SPJ8f6JwpKbC+w==}
+    dev: false
+
+  /@3-/str2sec@0.1.2:
+    resolution: {integrity: sha512-DffX/BWJ5jTfgKvKBvOnXesvADai0ZBJu8Dk2uomPncLlJtBElxXqcAAbgIlbG1T46/sti5eKG3waF+QDWGFfQ==}
+    dev: false
+
+  /@3-/time@0.1.3:
+    resolution: {integrity: sha512-ajOkL/eDj6ZbBD32ujVhWhjKYkDdvOyEevUTSdWCqmFv/z52HBbRGbV65GX7bizOSv5fXqfoQe/AkUlzM96Tzw==}
+    dev: false
+
+  /@3-/write@0.0.1:
+    resolution: {integrity: sha512-EvXAzDdmAynZyNJyMD5l90RfKhxYglJMJ5tXx3rj9VCUrFNhZnlRTIOJrteMtgtFsfTLf2hUrbh7TtPBnjgpLg==}
+    dev: false
+
+  /@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.2:
+    resolution: {integrity: sha512-9bfjwDxIDWmmOKusUcqdS4Rw+SETlp9Dy39Xui9BEGEk19dDwH0jhipwFzEff/pFg95NKymc6TOTbRKcWeRqyQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@msgpackr-extract/msgpackr-extract-darwin-x64@3.0.2:
+    resolution: {integrity: sha512-lwriRAHm1Yg4iDf23Oxm9n/t5Zpw1lVnxYU3HnJPTi2lJRkKTrps1KVgvL6m7WvmhYVt/FIsssWay+k45QHeuw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@msgpackr-extract/msgpackr-extract-linux-arm64@3.0.2:
+    resolution: {integrity: sha512-FU20Bo66/f7He9Fp9sP2zaJ1Q8L9uLPZQDub/WlUip78JlPeMbVL8546HbZfcW9LNciEXc8d+tThSJjSC+tmsg==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@msgpackr-extract/msgpackr-extract-linux-arm@3.0.2:
+    resolution: {integrity: sha512-MOI9Dlfrpi2Cuc7i5dXdxPbFIgbDBGgKR5F2yWEa6FVEtSWncfVNKW5AKjImAQ6CZlBK9tympdsZJ2xThBiWWA==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@msgpackr-extract/msgpackr-extract-linux-x64@3.0.2:
+    resolution: {integrity: sha512-gsWNDCklNy7Ajk0vBBf9jEx04RUxuDQfBse918Ww+Qb9HCPoGzS+XJTLe96iN3BVK7grnLiYghP/M4L8VsaHeA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@msgpackr-extract/msgpackr-extract-win32-x64@3.0.2:
+    resolution: {integrity: sha512-O+6Gs8UeDbyFpbSh2CPEz/UOrrdWPTBYNblZK5CxxLisYt4kGX3Sc+czffFonyjiGSq3jWLwJS/CCJc7tBr4sQ==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@types/geojson@7946.0.13:
+    resolution: {integrity: sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==}
+    dev: false
+
+  /@types/node@17.0.45:
+    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+    dev: false
+
+  /denque@2.1.0:
+    resolution: {integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==}
+    engines: {node: '>=0.10'}
+    dev: false
+
+  /iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      safer-buffer: 2.1.2
+    dev: false
+
+  /lru-cache@10.1.0:
+    resolution: {integrity: sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==}
+    engines: {node: 14 || >=16.14}
+    dev: false
+
+  /mariadb@3.2.3:
+    resolution: {integrity: sha512-Hyc1ehdUJwzvvzcLU2juZS528wJ6oE8pUlpgY0BAOdpKWcdN1motuugi5lC3jkpCkFpyNknHG7Yg66KASl3aPg==}
+    engines: {node: '>= 12'}
+    dependencies:
+      '@types/geojson': 7946.0.13
+      '@types/node': 17.0.45
+      denque: 2.1.0
+      iconv-lite: 0.6.3
+      lru-cache: 10.1.0
+    dev: false
+
+  /msgpackr-extract@3.0.2:
+    resolution: {integrity: sha512-SdzXp4kD/Qf8agZ9+iTu6eql0m3kWm1A2y1hkpTeVNENutaB0BwHlSvAIaMxwntmRUAUjon2V4L8Z/njd0Ct8A==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      node-gyp-build-optional-packages: 5.0.7
+    optionalDependencies:
+      '@msgpackr-extract/msgpackr-extract-darwin-arm64': 3.0.2
+      '@msgpackr-extract/msgpackr-extract-darwin-x64': 3.0.2
+      '@msgpackr-extract/msgpackr-extract-linux-arm': 3.0.2
+      '@msgpackr-extract/msgpackr-extract-linux-arm64': 3.0.2
+      '@msgpackr-extract/msgpackr-extract-linux-x64': 3.0.2
+      '@msgpackr-extract/msgpackr-extract-win32-x64': 3.0.2
+    dev: false
+    optional: true
+
+  /msgpackr@1.10.1:
+    resolution: {integrity: sha512-r5VRLv9qouXuLiIBrLpl2d5ZvPt8svdQTl5/vMvE4nzDMyEX4sgW5yWhuBBj5UmgwOTWj8CIdSXn5sAfsHAWIQ==}
+    optionalDependencies:
+      msgpackr-extract: 3.0.2
+    dev: false
+
+  /node-gyp-build-optional-packages@5.0.7:
+    resolution: {integrity: sha512-YlCCc6Wffkx0kHkmam79GKvDQ6x+QZkMjFGrIMxgFNILFvGSbCp2fCBC55pGTT9gVaz8Na5CLmxt/urtzRv36w==}
+    hasBin: true
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /safer-buffer@2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: false

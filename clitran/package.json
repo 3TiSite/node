@@ -1,0 +1,23 @@
+{
+  "name": "@3-/clitran",
+  "version": "0.1.3",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/clitran",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "is-chinese": "^2.0.0"
+  },
+  "bin": {
+    "clitran": "./lib/bin.js"
+  }
+}

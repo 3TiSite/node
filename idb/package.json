@@ -1,0 +1,19 @@
+{
+  "name": "@3-/idb",
+  "version": "0.0.1",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/idb",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "type": "module",
+  "dependencies": {
+    "idb": "^7.1.1"
+  }
+}

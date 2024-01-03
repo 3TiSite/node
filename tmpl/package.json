@@ -1,0 +1,19 @@
+{
+  "name": "@3-/tmpl",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/tmpl",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": ["lib/*"],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module"
+}

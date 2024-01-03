@@ -1,0 +1,24 @@
+{
+  "name": "@3-/is-change",
+  "version": "0.1.2",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/is-change",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@3-/binmap": "^0.0.1",
+    "@3-/u8": "^0.1.1",
+    "@3-/write": "^0.0.1",
+    "@3-/xxhash3": "^0.0.2",
+    "@3-/cache": "^0.0.3",
+    "@3-/vbyte": "^0.0.2"
+  }
+}

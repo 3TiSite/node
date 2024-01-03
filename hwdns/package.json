@@ -1,0 +1,26 @@
+{
+  "name": "@3-/hwdns",
+  "version": "0.1.8",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/hwdns",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@huaweicloud/huaweicloud-sdk-core": "^3.1.72",
+    "@huaweicloud/huaweicloud-sdk-dns": "^3.1.72",
+    "lodash-es": "^4.17.21"
+  }
+}

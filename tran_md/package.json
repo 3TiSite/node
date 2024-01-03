@@ -1,0 +1,31 @@
+{
+  "name": "@3-/tran_md",
+  "version": "0.0.15",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/tran_md",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {
+    "@3-/uridir": "^0.0.2",
+    "@3-/write": "^0.0.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@3-/cache_map": "^0.0.1",
+    "@3-/comment": "^0.0.1",
+    "@3-/htm2md": "^0.0.1",
+    "@3-/read": "^0.0.1",
+    "@3-/replace_n": "^0.0.1",
+    "@3-/title-case": "^0.0.1",
+    "@3-/tran": "^0.0.6",
+    "@3-/tranvar": "^0.0.7",
+    "@3-/utf8": "^0.0.3"
+  }
+}

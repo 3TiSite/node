@@ -1,0 +1,29 @@
+{
+  "name": "@3-/ipreq",
+  "version": "0.1.14",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3TiSite/node.git"
+  },
+  "homepage": "https://github.com/3TiSite/node/tree/main/ipreq",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {},
+  "type": "module",
+  "peerDependencies": {
+    "@3-/fetch": "^0.1.2",
+    "@3-/utf8": "^0.0.3",
+    "node-fetch": "^3.3.2",
+    "stream": "^0.0.2"
+  },
+  "dependencies": {
+    "@3-/err": "^0.1.4"
+  }
+}

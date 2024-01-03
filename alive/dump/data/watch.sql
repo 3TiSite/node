@@ -1,0 +1,10 @@
+LOCK TABLES `watch` WRITE;
+INSERT INTO `watch` VALUES
+(1,1,1,4,0,0,10),
+(2,1,1,6,0,0,10),
+(3,3,1,4,0,0,9),
+(4,3,1,6,0,0,9);
+UNLOCK TABLES;
+DELIMITER ;;
+;;
+DELIMITER ;

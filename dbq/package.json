@@ -1,0 +1,24 @@
+{
+  "name": "@3-/dbq",
+  "version": "0.1.17",
+  "repository": "https://github.com/3TiSite/node.git",
+  "homepage": "https://github.com/3TiSite/node/tree/main/dbq",
+  "author": "3Ti.Site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {},
+  "type": "module",
+  "peerDependencies": {
+    "@3-/is_dev": "^0.1.1",
+    "mariadb": "^3.2.3"
+  },
+  "dependencies": {
+    "@3-/retry": "^0.0.1"
+  }
+}

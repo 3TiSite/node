@@ -1,0 +1,4 @@
+cnameFlatten:
+  host: cname-flatten.fly.dev
+  duration: 10m
+  warnErr: 6

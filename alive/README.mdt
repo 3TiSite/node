@@ -1,5 +1,8 @@
 # @3-/alive
 
+监控代码见
+https://atomgit.com/3ti/rust/blob/main/alive
+
 用这个运行
 https://cloud.google.com/scheduler/docs/creating?hl=zh-cn
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env coffee
 
+CREATE = /^CREATE (\w+) [`|"]?(\w+)[`|"]?/
+
 < (sql)=>
   li = []
   sql = sql.replaceAll(
@@ -58,16 +60,16 @@
     else if i.startsWith(') ENGINE=')
       i = ');'
     else if i.startsWith 'CREATE DEFINER='
-      p = i.indexOf('` ')
-      if ~p
-        i = 'CREATE'+i.slice(p+1)
+      for s,p in i.slice(15)
+        if s == ' '
+          break
+      i = 'CREATE'+i.slice(p+15)
 
 
     if i.endsWith ('*/;;')
       i = i.slice(0,-4)+';;'
     li.push indent+i
 
-  create = /^CREATE (\w+) `?(\w+)`?/
   r = []
   t = []
 
@@ -82,7 +84,7 @@
     if i == 'DELIMITER ;;'
       continue
 
-    m = i.match(create)
+    m = i.match(CREATE)
     if m
       push()
       kind = m[1].toLowerCase()

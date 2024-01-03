@@ -5,32 +5,32 @@
 # https://github.com/mariadb-corporation/mariadb-connector-nodejs/blob/master/documentation/promise-api.md
 
 {
-  DB_HOST
-  DB_USER
-  DB_PASSWORD
-  DB_PORT
-  DB_NAME
-  DB_COMPRESS
-  DB_CONN_LIMIT
-  DB_SSL
+  MYSQL_HOST
+  MYSQL_USER
+  MYSQL_PWD
+  MYSQL_PORT
+  MYSQL_DB
+  MYSQL_COMPRESS
+  MYSQL_CONN_LIMIT
+  MYSQL_SSL
 } = process.env
 
 CONF = {
-  host: DB_HOST
-  user: DB_USER
-  port: Number.parseInt(DB_PORT) or 3306
-  database: DB_NAME
-  password: DB_PASSWORD
+  host: MYSQL_HOST
+  user: MYSQL_USER
+  port: Number.parseInt(MYSQL_PORT) or 3306
+  database: MYSQL_DB
+  password: MYSQL_PWD
 }
 
-if DB_SSL
-  CONF.ssl = JSON.parse(DB_SSL)
+if MYSQL_SSL
+  CONF.ssl = JSON.parse(MYSQL_SSL)
 
-if DB_COMPRESS
+if MYSQL_COMPRESS
   CONF.compress = true
 
 POOL = createPool({
-  connectionLimit: Number.parseInt(DB_CONN_LIMIT) or 8
+  connectionLimit: Number.parseInt(MYSQL_CONN_LIMIT) or 8
   acquireTimeout: 19999
   trace: IS_DEV
   bigIntAsNumber: true

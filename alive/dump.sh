@@ -2,26 +2,30 @@
 
 DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
-export MYSQL_PWD=$DB_PASSWORD
 set -ex
 
 mkdir -p dump/data
 
-arg="-h$DB_HOST -P$DB_PORT -u$DB_USER $DB_NAME"
-
-mysqldump $arg \
-  --skip-set-charset \
-  --events \
-  --no-data \
-  --skip-add-drop-table \
-  --routines >dump/table.sql
+arg="-h$MYSQL_HOST -P$MYSQL_PORT -u$MYSQL_USER $MYSQL_DB"
 
 ignore=("state")
 set +x
 for table in $(mysql $arg -e 'show tables' | tail -n +2); do
   if ! [[ ${ignore[@]} =~ ${table} ]]; then
-    mysqldump -t $arg $table >dump/data/$table.sql
+    mysqldump \
+      --compression-algorithms=zstd \
+      --set-gtid-purged=OFF \
+      -t $arg $table >dump/data/$table.sql
     echo $table
   fi
 done
-./dump.py
+# ./dump.py
+
+mysqldump $arg \
+  --skip-set-charset \
+  --set-gtid-purged=OFF \
+  --events \
+  --column-statistics=0 \
+  --no-data \
+  --skip-add-drop-table \
+  --routines >dump/table.sql

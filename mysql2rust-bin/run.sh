@@ -7,7 +7,7 @@ set -ex
 ./build.sh
 
 if [ ! -n "$1" ]; then
-  exec direnv exec . ./test/main.coffee | tee out.txt
+  exec direnv exec . ./lib/mysql2rust.js -r gen.rs
 else
   exec ./${@:1}
 fi

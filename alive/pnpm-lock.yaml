@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@3-/dbq':
-    specifier: ^0.1.18
-    version: 0.1.18(@3-/is_dev@0.1.1)(mariadb@3.2.3)
+    specifier: ^0.1.20
+    version: 0.1.20(@3-/is_dev@0.1.1)(mariadb@3.2.3)
   '@3-/default':
     specifier: ^0.1.7
     version: 0.1.7
@@ -27,8 +27,8 @@ packages:
     resolution: {integrity: sha512-ABXNqaN3kT4CBAdi43yjQQk7gbv7wkUAvlUIk+EC6DKptfiRSJtsRnYAjX17qYprdtpnYd5o8uESbS4xEP1hSw==}
     dev: false
 
-  /@3-/dbq@0.1.18(@3-/is_dev@0.1.1)(mariadb@3.2.3):
-    resolution: {integrity: sha512-RhC/wEGmFyKK86zUQChZTpqSbommMGNOcVK8Ce7e9giRX7gLlfF8g2h8NbYibvwgAnvNF/tPgYR+dIGeyE15eQ==}
+  /@3-/dbq@0.1.20(@3-/is_dev@0.1.1)(mariadb@3.2.3):
+    resolution: {integrity: sha512-JrtkI2j+s9zsbmywyGZVetSCL20843wF+Xd0bPA0QjmctlLk0+Ffr/cR2iRXT9obVWRmXyFbwjUcx2NGSQlepg==}
     peerDependencies:
       '@3-/is_dev': ^0.1.1
       mariadb: ^3.2.3

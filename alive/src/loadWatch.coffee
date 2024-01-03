@@ -8,6 +8,7 @@
     kind_id = await $one('SELECT id FROM kind WHERE v=?',kind)
     if Array.isArray li
       for [host, url_li] from li
+        console.log host, url_li
         host_id = await hostId host
         for url from url_li
           url_id = await urlId url

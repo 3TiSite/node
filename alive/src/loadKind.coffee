@@ -9,7 +9,7 @@
     duration = str2sec o.duration
     url_id = await urlId o.url
     await $e(
-      "INSERT INTO kind(v,url_id,duration,warnErr)VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE host_id=VALUES(host_id),warnErr=VALUES(warnErr),duration=VALUES(duration)",
+      "INSERT INTO kind(v,url_id,duration,warnErr)VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE url_id=VALUES(url_id),warnErr=VALUES(warnErr),duration=VALUES(duration)",
       kind,url_id,duration,(+o.warnErr or 0)
     )
   return

@@ -6,10 +6,12 @@
 
 < (kind) =>
   for [kind,o] from Object.entries kind
+    console.log kind, o
     duration = str2sec o.duration
-    arg_id = await argId o.arg
+    {arg, warnErr} = o
+    arg_id = if arg then await argId(arg) else 0
     await $e(
       "INSERT INTO kind(v,arg_id,duration,warnErr)VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE arg_id=VALUES(arg_id),warnErr=VALUES(warnErr),duration=VALUES(duration)",
-      kind,arg_id,duration,(+o.warnErr or 0)
+      kind,arg_id,duration,(+warnErr or 0)
     )
   return

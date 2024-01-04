@@ -2,3 +2,7 @@ cnameFlatten:
   arg: cname-flatten.fly.dev
   duration: 10m
   warnErr: 6
+
+smtp:
+  warnErr: 3
+  duration: 1m

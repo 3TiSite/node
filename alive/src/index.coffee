@@ -3,12 +3,12 @@
   @3-/default:
 
 {
-  urlId
+  argId
   hostId
 } = $vId
 
 
-< urlId
+< argId
 < hostId
 
 idVMap = (table, id_set)=>
@@ -17,10 +17,10 @@ idVMap = (table, id_set)=>
   })")
 
 
-_ping = (id, url, err, duration, warnErr)=>
+_ping = (id, arg, err, duration, warnErr)=>
   return
 
-update = (id, kind_host, dns_type, host, url, err, duration, warnErr, kindName)=>
+update = (id, kind_host, dns_type, host, arg, err, duration, warnErr, kindName)=>
   # await $e(
   #   "UPDATE watch SET err=?,duration=?,warnErr=? WHERE id=?",
   #   err, duration, warnErr, id
@@ -35,15 +35,15 @@ update = (id, kind_host, dns_type, host, url, err, duration, warnErr, kindName)=
   return
 
 ping = (id, kind_host, dns_type, host, suffix, err, duration, warnErr, kindName)=>
-  url = kind_host+'/'+dns_type+'/'+host+suffix
+  arg = kind_host+'/'+dns_type+'/'+host+suffix
   err += 1
   try
-    await _ping(url)
+    await _ping(arg)
     -- err
   catch err
     console.error(err)
   finally
-    update(id, kind_host, dns_type, host, url, err, duration, warnErr, kindName)
+    update(id, kind_host, dns_type, host, arg, err, duration, warnErr, kindName)
   return
 
 < =>
@@ -51,19 +51,19 @@ ping = (id, kind_host, dns_type, host, suffix, err, duration, warnErr, kindName)
 
   kind_set = new Set
   host_set = new Set
-  url_set = new Set
+  arg_set = new Set
 
-  li = await $q('SELECT id,host_id,kind_id,dns_type,err,url_id FROM watch WHERE ts<=?', now)
+  li = await $q('SELECT id,host_id,kind_id,dns_type,err,arg_id FROM watch WHERE ts<=?', now)
   if not li.length
     return
 
   for [
-    id,host_id,kind_id,dns_type,err,url_id
+    id,host_id,kind_id,dns_type,err,arg_id
   ] from li
     kind_set.add kind_id
     host_set.add host_id
-    if url_id
-      url_set.add url_id
+    if arg_id
+      arg_set.add arg_id
 
   kind_li = await $q("SELECT id,host_id,duration,warnErr,v FROM kind WHERE id IN (#{
     [...kind_set].join(',')
@@ -75,10 +75,10 @@ ping = (id, kind_host, dns_type, host, suffix, err, duration, warnErr, kindName)
     kind_map.set i[0],i.slice(1)
 
   host_v = await idVMap 'host', host_set
-  url_v = await idVMap 'url', url_set
+  arg_v = await idVMap 'arg', arg_set
 
   ing = []
-  for [id,host_id,kind_id,dns_type,err,url_id] from li
+  for [id,host_id,kind_id,dns_type,err,arg_id] from li
     kind = kind_map.get kind_id
     kind_host = host_v.get kind[0]
     host = host_v.get host_id
@@ -88,9 +88,9 @@ ping = (id, kind_host, dns_type, host, suffix, err, duration, warnErr, kindName)
       kind_host
       dns_type
       host
-      if url_id then '/'+url_v.get(url_id) else ''
+      if arg_id then '/'+arg_v.get(arg_id) else ''
       err
       ...kind.slice(1) # duration, warnErr, kindName
     )
-  # console.log id,host_id,kind_id,dns_type,ts,err,url_id
+  # console.log id,host_id,kind_id,dns_type,ts,err,arg_id
   Promise.allSettled ing

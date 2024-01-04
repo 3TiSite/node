@@ -1,4 +1,4 @@
 cnameFlatten:
-  url: cname-flatten.fly.dev
+  arg: cname-flatten.fly.dev
   duration: 10m
   warnErr: 6

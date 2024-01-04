@@ -9,6 +9,6 @@ ROOT = uridir import.meta
 
 await loadKind load join ROOT,'kind.nt'
 
-# await loadWatch load join ROOT,'watch.nt'
+await loadWatch load join ROOT,'watch.nt'
 
 process.exit()

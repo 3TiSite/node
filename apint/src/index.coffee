@@ -197,7 +197,7 @@ out_mod_li = (out)=>
 
   return r
 
-< (dir)=>
+export default gen = (dir)=>
   mod_rs(dir)
   cd dir
   base = basename dir

@@ -1,9 +1,13 @@
 #!/usr/bin/env coffee
 
-> @3-/apint
-#   @3-/uridir
-#   path > join
+> @3-/apint > out_mod_li
+  @3-/read
+  @3-/uridir
+  path > join
 
-# ROOT = uridir(import.meta)
+ROOT = uridir(import.meta)
 
-console.log await apint 123
+rs = read join ROOT,'test.rs'
+
+for [mod,i] from out_mod_li(rs)
+  console.log mod

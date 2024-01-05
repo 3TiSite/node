@@ -204,7 +204,23 @@ export default gen = (dir)=>
   $.verbose = false
   out = await $"cargo expand --theme=none"
   $.verbose = true
+  api_nt = gen_nt(out.stdout,base)
+  write(
+    join dir, 'api.nt'
+    '# GEN BY srv/rust/sh/api.coffee . DON\'T EDIT !\n'+dumps(
+      api_nt
+    ).trim()+'\n'
+  )
+  mod = "#{basename(dirname dir)}_#{base}"
+  return [
+    mod
+    "pub use #{mod}::{#{import_li.join(', ')}};"
+    Object.keys(api_nt)
+    get_map
+  ]
 
+
+< gen_nt = (out, base)=>
   import_li = []
   api_nt = {}
   get_map = {}
@@ -225,7 +241,7 @@ export default gen = (dir)=>
           map_li[p](url, i)
     return !!r
 
-  for [mod, li] from out_mod_li out.stdout
+  for [mod, li] from out_mod_li out
     realm = mod
     if mod == base
       mod = ''
@@ -246,19 +262,8 @@ export default gen = (dir)=>
         if merge(base, i+end)
           import_li.push 'self as '+base
 
-  write(
-    join dir, 'api.nt'
-    '# GEN BY srv/rust/sh/api.coffee . DON\'T EDIT !\n'+dumps(
-      api_nt
-    ).trim()+'\n'
-  )
-  mod = "#{basename(dirname dir)}_#{base}"
-  return [
-    mod
-    "pub use #{mod}::{#{import_li.join(', ')}};"
-    Object.keys(api_nt)
-    get_map
-  ]
+  return api_nt
+
 
 export scan = (root)=>
   for dir from readdirSync root

@@ -19,5 +19,5 @@ console.log await apint 123
 output :
 
 ```
-123
+./out.txt
 ```

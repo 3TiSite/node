@@ -197,7 +197,7 @@ out_mod_li = (out)=>
 
   return r
 
-< gen = (dir)=>
+< (dir)=>
   mod_rs(dir)
   cd dir
   base = basename dir
@@ -260,7 +260,7 @@ out_mod_li = (out)=>
     get_map
   ]
 
-export default (root)=>
+export scan = (root)=>
   for dir from readdirSync root
     if dir.startsWith '.'
       continue

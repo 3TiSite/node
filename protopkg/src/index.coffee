@@ -99,7 +99,7 @@ gen = (mod, dir, proto, to)=>
   "./*": "./*"
 },
 "peerDependencies": {
-  "@3-/proto": "^2.0.34",
+  "@3-/proto": "^2.0.35",
   "@~3/captcha": "^0.1.61"
 },
 "type": "module"

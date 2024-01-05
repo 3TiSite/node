@@ -107,7 +107,21 @@ gen = (mod, dir, proto, to)=>
     )
   return
 
+dirgen = (mod, d, to)=>
+  proto = join d, 'api.proto'
+  if existsSync proto
+    await gen(
+      mod
+      d
+      proto
+      to
+    )
+  return
+
 < (root, to)=>
+  if existsSync join(root,'Cargo.toml')
+    await dirgen dirname(root),root,to
+    return
   for dir from readdirSync(root)
     if dir.startsWith '.'
       continue
@@ -115,13 +129,5 @@ gen = (mod, dir, proto, to)=>
     for i from readdirSync(dir)
       if i.startsWith '.'
         continue
-      d = join dir, i
-      proto = join d, 'api.proto'
-      if existsSync proto
-        await gen(
-          i
-          d
-          proto
-          to
-        )
+      await dirgen i, join(dir, i), to
   return

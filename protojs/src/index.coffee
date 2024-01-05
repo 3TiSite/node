@@ -31,6 +31,7 @@ NODEFAULT = 'nodefault'
   decode_default = 0
 
   has_bin = 0
+  has_bin1 = 0
 
   for ns from Object.values pb.nested
     for [k,any] from Object.entries ns.nested
@@ -106,7 +107,8 @@ NODEFAULT = 'nodefault'
                 else
                   char0 = cast_type.charAt(0)
                   if char0.toLowerCase() != char0
-                    v = []
+                    v = '$'+cast_type+'(BIN1)$'
+                    has_bin1 = 1
                   else
                     switch cast_type
                       when 'string'
@@ -114,7 +116,7 @@ NODEFAULT = 'nodefault'
                       when 'bool'
                         v = false
                       when 'bytes'
-                        v = 'BIN'
+                        v = '$BIN$'
                         has_bin = 1
                 if v != undefined
                   default_li[id] = v
@@ -157,7 +159,7 @@ NODEFAULT = 'nodefault'
             decode_default = 1
             decode = """decode(
               #{func_str}
-              #{JSON.stringify(default_li).replaceAll('null','').replaceAll('"BIN"','BIN')}
+              #{JSON.stringify(default_li).replaceAll('null','').replaceAll('"$','').replaceAll('$"','')}
             )"""
 
           lip "export const #{k} #{comment} = "+'$'+decode+'\n'
@@ -178,5 +180,7 @@ import {#{[...cast_set].map((i)=>"#{i} as $#{i}").join(',')}} from '@3-/proto/de
   ]
   if has_bin
     import_.push 'import BIN from "@3-/proto/decode/BIN.js"'
+  if has_bin1
+    import_.push 'import BIN1 from "@3-/proto/decode/BIN1.js"'
 
   import_.join('\n')+'\n\n'+js

@@ -197,7 +197,7 @@ out_mod_li = (out)=>
 
   return r
 
-export default (dir)=>
+< gen = (dir)=>
   mod_rs(dir)
   cd dir
   base = basename dir
@@ -259,3 +259,15 @@ export default (dir)=>
     Object.keys(api_nt)
     get_map
   ]
+
+export default (root)=>
+  for dir from readdirSync root
+    if dir.startsWith '.'
+      continue
+    dir = join root, dir
+    for i from readdirSync dir
+      if i.startsWith '.'
+        continue
+      if existsSync join dir,i,'Cargo.toml'
+        await gen join(dir,i)
+  return

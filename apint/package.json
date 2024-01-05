@@ -28,6 +28,6 @@
     "zx": "^7.2.3"
   },
   "bin": {
-    "mdt": "./lib/bin.js"
+    "apint": "./lib/bin.js"
   }
 }

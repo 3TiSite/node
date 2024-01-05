@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-> ./index.coffee:gen
+> ./index.js:gen
 
 argv = process.argv.slice(2)
 

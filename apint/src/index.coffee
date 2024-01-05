@@ -218,7 +218,7 @@ export default gen = (dir)=>
     api_nt
     import_li
     get_map
-  ] = expand_gen(
+  ] = await expand_gen(
     base
   )
   write(

@@ -7,7 +7,7 @@
 
 ROOT = uridir import.meta
 
-# await loadKind load join ROOT,'kind.nt'
+await loadKind load join ROOT,'kind.nt'
 
 await loadWatch load join ROOT,'watch.nt'
 

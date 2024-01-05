@@ -8,7 +8,7 @@
   @3-/camel/Camel.js
   zx/globals:
   path > join basename dirname
-  fs > readdirSync
+  fs > readdirSync existsSync
 
 removeEnd = (s)=>
   s = s.trim()

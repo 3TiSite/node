@@ -2,7 +2,7 @@
 
 > ./index.js > expand_gen
   path > join
-  @3-/nt/dump
+  @3-/nt/dump.js
 
 argv = process.argv.slice(2)
 

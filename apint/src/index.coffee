@@ -204,7 +204,10 @@ export default gen = (dir)=>
   $.verbose = false
   out = await $"cargo expand --theme=none"
   $.verbose = true
-  api_nt = gen_nt(out.stdout,base)
+  [
+    api_nt
+    import_li
+  ] = gen_nt(out.stdout,base)
   write(
     join dir, 'api.nt'
     '# GEN BY srv/rust/sh/api.coffee . DON\'T EDIT !\n'+dumps(
@@ -262,7 +265,10 @@ export default gen = (dir)=>
         if merge(base, i+end)
           import_li.push 'self as '+base
 
-  return api_nt
+  [
+    api_nt
+    import_li
+  ]
 
 
 export scan = (root)=>

@@ -104,14 +104,18 @@ NODEFAULT = 'nodefault'
                 if DEFAULT_0.has cast_type
                   v = 0
                 else
-                  switch cast_type
-                    when 'string'
-                      v = ''
-                    when 'bool'
-                      v = false
-                    when 'bytes'
-                      v = 'BIN'
-                      has_bin = 1
+                  char0 = cast_type.charAt(0)
+                  if char0.toLowerCase() != char0
+                    v = []
+                  else
+                    switch cast_type
+                      when 'string'
+                        v = ''
+                      when 'bool'
+                        v = false
+                      when 'bytes'
+                        v = 'BIN'
+                        has_bin = 1
                 if v != undefined
                   default_li[id] = v
 

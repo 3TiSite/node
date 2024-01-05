@@ -24,5 +24,5 @@ output :
 ```
 
 Index() -> StateLi
-[ { Index: '→StateLi' }, [ 'index as Index' ] ]
+[ { Index: '→StateLi' }, [ 'index as Index' ], {} ]
 ```

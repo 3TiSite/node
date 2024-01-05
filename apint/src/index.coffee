@@ -207,6 +207,7 @@ export default gen = (dir)=>
   [
     api_nt
     import_li
+    get_map
   ] = gen_nt(out.stdout,base)
   write(
     join dir, 'api.nt'
@@ -268,6 +269,7 @@ export default gen = (dir)=>
   [
     api_nt
     import_li
+    get_map
   ]
 
 

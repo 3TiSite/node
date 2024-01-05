@@ -9,4 +9,5 @@ ROOT = uridir(import.meta)
 
 rs = read join ROOT,'test.rs'
 
-console.log gen_nt(rs,'')[0]
+nt = gen_nt(rs,'')[0]
+console.log [nt]

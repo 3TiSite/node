@@ -2,7 +2,7 @@
 
 > ./index.js > expand_gen
   path > join
-  @3-/write
+  @3-/nt/dump
 
 argv = process.argv.slice(2)
 
@@ -10,7 +10,7 @@ dir = argv[1] or process.cwd()
 
 cd dir
 
-write(
+dump(
   join dir, 'api.nt'
   (await expand_gen(''))[0]
 )

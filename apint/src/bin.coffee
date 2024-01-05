@@ -1,9 +1,11 @@
 #!/usr/bin/env coffee
 
-> ./index.js:gen
+> ./index.js > expand_gen
 
 argv = process.argv.slice(2)
 
-await gen argv[1] or process.cwd()
+cd argv[1] or process.cwd()
+
+expand_gen('')
 
 process.exit()

@@ -4,7 +4,7 @@
 use std::prelude::rust_2021::*;
 #[macro_use]
 extern crate std;
-mod index {
+mod li {
     use alive::{api, status};
     pub async fn post() -> ::re::Result<impl Into<::re::Msg>> {
         Ok::<api::StateLi, _>(status().await?)
@@ -402,7 +402,7 @@ fn main() -> Result<()> {
                 .await;
         });
         let app = Router::new()
-            .route("/", post(re::FnAny(index::post)))
+            .route("/", post(re::FnAny(li::post)))
             .route("/ping", get(re::FnAny(ping)))
             .layer(ServiceBuilder::new().layer(middleware::from_fn(header)));
         t3::srv(app).await;

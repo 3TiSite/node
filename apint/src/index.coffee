@@ -197,18 +197,30 @@ macro_rules! urlmod {
 
   return r
 
+
+export expand = =>
+  $.verbose = false
+  out = await $"cargo expand --theme=none"
+  $.verbose = true
+  return out.stdout
+
+export expand_gen = (base)=>
+  gen_nt(
+    await expand()
+    base
+  )
+
 export default gen = (dir)=>
   mod_rs(dir)
   cd dir
   base = basename dir
-  $.verbose = false
-  out = await $"cargo expand --theme=none"
-  $.verbose = true
   [
     api_nt
     import_li
     get_map
-  ] = gen_nt(out.stdout,base)
+  ] = expand_gen(
+    base
+  )
   write(
     join dir, 'api.nt'
     '# GEN BY srv/rust/sh/api.coffee . DON\'T EDIT !\n'+dumps(

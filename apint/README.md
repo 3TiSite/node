@@ -16,13 +16,13 @@ ROOT = uridir(import.meta)
 
 rs = read join ROOT,'test.rs'
 
-console.log gen_nt(rs,'')
+console.log gen_nt(rs,'')[0]
 ```
 
 output :
 
 ```
 
-Index() -> StateLi
-[ { Index: '→StateLi' }, [ 'index as Index' ], {} ]
+Li() -> StateLi
+{ Li: '→StateLi' }
 ```

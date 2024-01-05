@@ -6,6 +6,6 @@ argv = process.argv.slice(2)
 
 cd argv[1] or process.cwd()
 
-expand_gen('')
+await expand_gen('')
 
 process.exit()

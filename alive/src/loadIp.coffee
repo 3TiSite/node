@@ -2,7 +2,7 @@
 
 > ./index.js > argId
   @3-/str2sec
-  @3-/dbq > $e
+  @3-/dbq > $e $q
   @3-/u8/U8.js
 
 < (name_ip) =>
@@ -14,6 +14,6 @@
     li.push '(\''+name+'\','+ip+')'
   if li.length
     sql = "INSERT INTO ip(name,v)VALUES#{li.join(',')} ON DUPLICATE KEY UPDATE name=VALUES(name),v=VALUES(v)"
-    console.log sql
     await $e sql
-  return
+
+  new Map await $q("SELECT name,id FROM ip")

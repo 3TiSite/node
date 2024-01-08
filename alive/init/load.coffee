@@ -7,8 +7,21 @@
 
 ROOT = uridir import.meta
 
-await loadKind load join ROOT,'kind.nt'
+{
+  kind
+  watch
+  ip
+} = new Proxy(
+  {}
+  get: (_, fp) =>
+    load join ROOT,fp
+)
 
-await loadWatch load join ROOT,'watch.nt'
+
+console.log kind
+
+# await loadKind kind
+#
+# await loadWatch watch
 
 process.exit()

@@ -8,3 +8,8 @@ smtp:
   - u1-mail.i18n.site
   - u2-mail.i18n.site
   - u3-mail.i18n.site
+
+ipv6_proxy:
+  - u1
+  - u2
+  - u3

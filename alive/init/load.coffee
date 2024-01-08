@@ -19,12 +19,13 @@ ROOT = uridir import.meta
 )
 
 
-IP = await loadIp ip
+[
+  IP
+] = await Promise.all(
+  loadIp ip
+  loadKind kind
+)
 
-console.log IP
-
-# await loadKind kind
-#
-# await loadWatch watch
+await loadWatch IP,watch
 
 process.exit()

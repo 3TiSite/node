@@ -11,7 +11,7 @@ insert = (kind_id, host_id, arg_id)=>
     )
   return
 
-< (watch)=>
+< (IP, watch)=>
   for [kind, li] from Object.entries watch
     kind_id = await $one('SELECT id FROM kind WHERE v=?',kind)
     if Array.isArray li[0]
@@ -24,6 +24,9 @@ insert = (kind_id, host_id, arg_id)=>
     else
       for host from li
         console.log host
-        host_id = await hostId host
+        if host.includes '.'
+          host_id = await hostId host
+        else
+          host_id = IP.get host
         await insert kind_id, host_id, 0
   return

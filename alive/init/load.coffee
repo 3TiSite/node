@@ -19,7 +19,9 @@ ROOT = uridir import.meta
 )
 
 
-await loadIp ip
+IP = await loadIp ip
+
+console.log IP
 
 # await loadKind kind
 #

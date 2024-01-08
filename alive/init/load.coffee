@@ -4,6 +4,7 @@
   path > join
   @3-/alive/loadKind.js
   @3-/alive/loadWatch.js
+  @3-/alive/loadIp.js
 
 ROOT = uridir import.meta
 
@@ -18,7 +19,7 @@ ROOT = uridir import.meta
 )
 
 
-console.log kind
+await loadIp ip
 
 # await loadKind kind
 #

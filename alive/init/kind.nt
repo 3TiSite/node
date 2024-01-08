@@ -10,4 +10,4 @@ smtp:
 ipv6_proxy:
   warnErr: 3
   duration: 1m
-  dns_type: 0
+  dns_type: ip4

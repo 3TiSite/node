@@ -1,7 +1,7 @@
 #!/usr/bin/env coffee
 
 > ./index.js > argId
-  @3-/dbq > $e $one
+  @3-/dbq > $e $one $q
   @3-/utf8/utf8d.js
 
 IP = new Map(

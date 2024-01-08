@@ -14,7 +14,7 @@ ROOT = uridir import.meta
 } = new Proxy(
   {}
   get: (_, fp) =>
-    load join ROOT,fp
+    load join ROOT,fp+'.nt'
 )
 
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env coffee
 > @3-/uridir
   @3-/nt/load.js
-  path > join
   @3-/alive/loadKind.js
   @3-/alive/loadWatch.js
   @3-/alive/loadIp.js
+  path > join
 
 ROOT = uridir import.meta
 

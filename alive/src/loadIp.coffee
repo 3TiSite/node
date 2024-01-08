@@ -4,6 +4,7 @@
   @3-/str2sec
   @3-/dbq > $e $q
   @3-/u8/U8.js
+  @3-/utf8/utf8d.js
 
 < (name_ip) =>
   li = []
@@ -16,4 +17,9 @@
     sql = "INSERT INTO ip(name,v)VALUES#{li.join(',')} ON DUPLICATE KEY UPDATE name=VALUES(name),v=VALUES(v)"
     await $e sql
 
-  new Map await $q("SELECT name,id FROM ip")
+  new Map(
+    (
+      await $q("SELECT name,id FROM ip")
+    ).map ([k,v])=>
+      [utf8d(k),v]
+  )

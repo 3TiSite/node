@@ -21,10 +21,10 @@ ROOT = uridir import.meta
 
 [
   IP
-] = await Promise.all(
+] = await Promise.all [
   loadIp ip
   loadKind kind
-)
+]
 
 await loadWatch IP,watch
 

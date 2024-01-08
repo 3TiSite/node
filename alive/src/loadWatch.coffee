@@ -4,15 +4,19 @@
   @3-/dbq > $e $one $q
   @3-/utf8/utf8d.js
 
+mapUtf8d = ([k,v])=>
+  [utf8d(k),v]
+
 IP = new Map(
   (
     await $q("SELECT name,id FROM ip")
-  ).map ([k,v])=>
-    [utf8d(k),v]
+  ).map mapUtf8d
 )
 
 HOST = new Map(
-  await $q("SELECT v,id FROM host")
+  (
+    await $q("SELECT v,id FROM host")
+  ).map mapUtf8d
 )
 
 insert = (kind_id, host, arg_id)=>

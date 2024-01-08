@@ -2,7 +2,6 @@
 > @3-/uridir
   @3-/nt/load.js
   @3-/alive/loadKind.js
-  @3-/alive/loadWatch.js
   @3-/alive/loadIp.js
   path > join
 
@@ -26,6 +25,8 @@ ROOT = uridir import.meta
   loadKind kind
 ]
 
-await loadWatch IP,watch
+await (await import('@3-/alive/loadWatch.js')).default(
+  watch
+)
 
 process.exit()
